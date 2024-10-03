@@ -1,0 +1,4 @@
+image:
+  repository: shihonotomo/healthcare_backend
+  pullPolicy: IfNotPresent
+  tag: latest
