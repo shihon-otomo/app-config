@@ -10,9 +10,9 @@ spec:
   - list:
       elements:
       - cluster: dev-env
-        url: https://kubernetes.default.svc
+        url: https://api.dev-cluster.example.com
       - cluster: production
-        url: https://kubernetes.default.svc
+        url: https://api.production-cluster.example.com
   template:
     metadata:
       name: '{{cluster}}-data-application'
