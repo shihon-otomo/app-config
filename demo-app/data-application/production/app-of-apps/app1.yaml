@@ -13,7 +13,7 @@ spec:
     targetRevision: HEAD
     path: demo-app/data-application/production/app-of-apps/app1
   destination:
-    server: https://kubernetes.default.svc
+    server: http://127.0.0.1:59632/
   syncPolicy:
     automated:
       prune: true
