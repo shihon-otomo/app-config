@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://github.com/shihon-otomo/app-config.git
     targetRevision: HEAD
-    path: demo-app/data-application/dev-env/data-ui
+    path: demo-app/data-application/dev-env/app-of-apps/data-ui
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
