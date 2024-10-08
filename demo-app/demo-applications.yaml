@@ -21,7 +21,7 @@ spec:
       source:
         repoURL: https://github.com/shihon-otomo/app-config.git
         targetRevision: main
-        path: demo-app/data-application/{{cluster}}
+        path: demo-app/data-application/{{cluster}}/app-of-apps
       destination:
         server: '{{url}}'
         namespace: argocd
