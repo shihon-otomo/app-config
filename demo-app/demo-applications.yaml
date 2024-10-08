@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: guestbook
+  name: data-application
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -9,19 +9,19 @@ spec:
   generators:
   - list:
       elements:
-      - cluster: engineering-dev
+      - cluster: dev-env
         url: https://kubernetes.default.svc
-      - cluster: engineering-prod
+      - cluster: production
         url: https://kubernetes.default.svc
   template:
     metadata:
-      name: '{{cluster}}-guestbook'
+      name: '{{cluster}}-data-application'
     spec:
       project: default
       source:
         repoURL: https://github.com/shihon-otomo/app-config.git
         targetRevision: main
-        path: demo-applications.yaml/guestbook/{{cluster}}
+        path: demo-app/data-application/{{cluster}}
       destination:
         server: '{{url}}'
         namespace: argocd

@@ -1,19 +1,19 @@
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook
+  name: data-ui-dev
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  destination:
-    namespace: argocd
-    server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    path: guestbook
-    repoURL: https://github.com/argoproj/argocd-example-apps
+    repoURL: https://github.com/shihon-otomo/app-config.git
     targetRevision: HEAD
+    path: demo-app/data-application/dev-env/data-ui
+  destination:
+    server: https://kubernetes.default.svc
   syncPolicy:
     automated:
       prune: true

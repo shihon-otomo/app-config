@@ -4,4 +4,4 @@ spec:
   source:
     repoURL: https://github.com/shihon-otomo/app-config.git
     targetRevision: main
-    path: demo-applications/guestbook/engineering-prod
+    path: demo-applications.yaml/guestbook/engineering-prod
